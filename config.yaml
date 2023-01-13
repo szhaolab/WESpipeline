@@ -1,0 +1,33 @@
+#Snakemake configuration file
+
+#project directory this needs to be changed
+proj_dir: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/Labs/Zhao/62022_variantCalling/P0723/
+
+
+# REF GENOME FILE (must contain .fasta, .fai, .dic)
+REF_GENOME_DIR: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/genomic_references/reference_index_generation/Homo_sapiens.GRCh38.dna.primary_assembly.fa
+#REF_GENOME_DIR: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/genomic_references/reference_index_generation/gatk/Homo_sapiens_assembly38.fasta
+SITES_VAR: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/genomic_references/reference_index_generation/gatk/
+
+# Number of clonal clusters for Titan
+CLONAL_CLUSTERS: 3
+
+# GC content and mappability files for the reference genome
+GC_FILE: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/Labs/Zhao/62022_variantCalling/gc_hg38_1000kb.wig
+MAP_FILE: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/Labs/Zhao/62022_variantCalling/map_hg38_1000kb.wig
+
+# Sample names for somatic mutations
+tumor_sample_name: "tumor"
+normal_sample_name: "normal"
+
+# Tools
+BWA_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/rnaseq_w/bin/bwa
+SAMTOOLS_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/rnaseq_w/bin/samtools
+JAVA_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/rnaseq_w/bin/java
+PICARD_PATH: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/misc/sullivan/tools/picard/picard.jar
+GATK_JAVA_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/gatk/bin/java
+GATK_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/gatk/bin/gatk
+GATK_JAR: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/gatk/share/gatk4-4.1.8.1-0/gatk-package-4.1.8.1-local.jar
+BCFTOOLS_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/tools/bin/bcftools
+READCOUNTER_PATH: /dartfs-hpc/rc/home/h/f002z1h/.conda/envs/tools/bin/readCounter
+#RSCRIPT_PATH: /dartfs-hpc/rc/lab/G/GMBSR_bioinfo/Labs/Zhao/62022_variantCalling
